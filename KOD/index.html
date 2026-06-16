@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider Number Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    
+    <audio id="click-sound" src="sound/kodclick.wav" preload="auto"></audio>
+    <audio id="winner-sound" src="sound/kodwinner.wav" preload="auto"></audio>
+
+    
+    <div id="intro-screen" class="screen active">
+      <img src="img/kodintro.png" alt="Intro" class="bg-img" />
+      <div class="screen-overlay">
+        <button onclick="playClick(); showScreen('rules-screen')">Play</button>
+        
+      </div>
+    </div>
+
+   
+    <div id="rules-screen" class="screen">
+      <img src="img/kodgame.png" alt="Intro" class="bg-img" />
+      <div class="screen-overlay">
+        <h2>How to Play</h2>
+        <ul>
+          <li>You and the Bot each pick a number from 0 to 100.</li>
+          <li>The average of both is multiplied by 0.8.</li>
+          <li>That result is the <strong>Spider Number</strong>.</li>
+          <li>Whoever is <strong>closest</strong> to it wins the round.</li>
+          <li>Loser loses a ❤️. First to 0 hearts loses.</li>
+        </ul>
+        <button onclick="playClick(); startGame()">Start Game</button>
+      </div>
+    </div>
+
+    
+    <div id="game-screen" class="screen">
+      <img src="img/kodgame.png" alt="Game" class="bg-img" />
+      <div class="screen-overlay game-overlay">
+
+        
+        <div class="corner-lives top-left">
+          <span class="lives-label">You</span>
+          <div id="player-hearts" class="hearts"></div>
+        </div>
+        <div class="corner-lives top-right">
+          <span class="lives-label">Bot</span>
+          <div id="bot-hearts" class="hearts"></div>
+        </div>
+
+        
+        <div class="game-centre">
+          <div class="round-display">Round <span id="round-number">1</span></div>
+
+          
+          <div id="input-area" class="input-area">
+            <p>Choose a number between 0 and 100</p>
+            <input
+              type="number"
+              id="player-input"
+              min="0"
+              max="100"
+              placeholder="Enter number"
+              inputmode="numeric"
+            />
+            <button id="submit-btn" onclick="playClick(); submitNumber()">Submit</button>
+          </div>
+
+          
+          <div id="result-area" class="result-area hidden">
+            <p>You chose: <strong id="show-player-num"></strong></p>
+            <p>Bot chose: <strong id="show-bot-num"></strong></p>
+            <p class="spider-label"> Spider No. : <strong id="show-spider"></strong></p>
+            <p id="round-winner-msg" class="winner-msg"></p>
+            <button onclick="playClick(); nextRound()">Next Round →</button>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+    <div id="end-screen" class="screen">
+      <img src="img/kodgame.png" alt="Game" class="bg-img" />
+      <div class="screen-overlay">
+        <h2 id="end-title"></h2>
+        <p id="end-message"></p>
+        <button onclick="playClick(); resetGame()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
