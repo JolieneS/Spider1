@@ -11,7 +11,9 @@ You can test and interact with the web development applications directly in your
 * 🎮 **Play Base Web Task (KOD):** https://jolienes.github.io/Spider1/KOD/
 * 🎮 **Play Domain-Specific Task (HL):** https://jolienes.github.io/Spider1/HL/
 
-*(Note: Please replace `YOUR_GITHUB_USERNAME` with your actual GitHub username in lowercase to activate the links.)*
+Google Drive Link : 
+
+https://drive.google.com/drive/folders/1Eu16biQNDOr6AXCnlhDXL0slMac20QCp?usp=drive_link
 
 ---
 
