@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawkins Labyrinth</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <audio id="dice-sound" src="sound/HLdice.ogg" preload="auto"></audio>
+    <audio id="tick-sound" src="sound/HLclock.wav" preload="auto" loop></audio>
+    <audio id="intro-sound" src="sound/HLintro.wav" preload="auto" loop></audio>
+    <audio id="click-sound" src="sound/HLclick.wav" preload="auto"></audio>
+
+    <div id="intro-screen" class="screen active">
+      <img src="img/HLintro.png" alt="Intro" class="bg-img" />
+      <div class="overlay">
+        <button onclick="playClick(); showScreen('rules-screen')">Enter the Labyrinth</button>
+      </div>
+    </div>
+
+    <div id="rules-screen" class="screen">
+      <img src="img/HLgame.png" alt="Intro" class="bg-img" />
+      <div class="overlay">
+        <h2>How to Play</h2>
+        <ul>
+          <li>You start at the bottom-left corner of a 5×5 grid.</li>
+          <li>Each turn, roll the 1-10 digital dice.</li>
+          <li>Click a neighboring cell. If your roll matches or beats its hidden requirement, you reveal it and step in.</li>
+          <li><b>Hawkins Blocks</b> are safe, <b>Upside Down Blocks</b> deal −5 HP.</li>
+          <li>Watch out! Hidden <b>Demogorgons</b> deal −10 HP, and the <b>Mind Flayer</b> deals −15 HP!</li>
+          <li><b>Power-ups (Usable after move 1):</b> Psychic power reveals all neighboring tiles instantly. Flamethrower burns an adjacent hidden box so it can be crossed without requiring a dice roll.</li>
+          <li>Escape through the hidden Gate with more HP than Vecna to win. He starts at 5 HP and gains +1 every second!</li>
+        </ul>
+        <button onclick="playClick(); showScreen('game-screen'); initGame()">Start Game</button>
+      </div>
+    </div>
+
+    <div id="game-screen" class="screen">
+      <img src="img/HLgame.png" alt="Game" class="bg-img" />
+      <div class="overlay game-overlay">
+
+        <div class="hp-block top-left">
+          <span class="hp-label">Vecna Clock</span>
+          <span id="vecna-hp" class="hp-value">0</span>
+        </div>
+
+        <div class="hp-block top-right">
+          <span class="hp-label">Your HP</span>
+          <span id="player-hp" class="hp-value">75</span>
+        </div>
+
+        <div class="game-split">
+
+          <div class="left-panel">
+            <p class="dice-label">Roll the dice</p>
+            <div id="dice-face" class="dice-face">?</div>
+            <button id="roll-btn" onclick="rollDice()">Roll</button>
+            <p id="roll-hint" class="roll-hint"></p>
+
+            <p class="inventory-title">Inventory Power-Ups</p>
+            <div class="powerups-container">
+              <button id="btn-psychic" class="power-btn" onclick="selectPsychic()">
+                <span>Psychic Power</span>
+                <span class="count">1</span>
+              </button>
+              <button id="btn-flamethrower" class="power-btn" onclick="selectFlamethrower()">
+                <span>Flamethrower</span>
+                <span class="count">1</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="right-panel">
+            <div id="grid" class="grid"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="end-screen" class="screen">
+      <div class="overlay">
+        <h2 id="end-title"></h2>
+        <p id="end-message"></p>
+        <button onclick="playClick(); showScreen('intro-screen'); startIntro()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
