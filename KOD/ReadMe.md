@@ -1,66 +1,66 @@
-# 🔦 Hawkins Labyrinth
+# 🕷️ Spider Number Game
 
-A browser-based survival game set in the Stranger Things universe. Navigate a 5×5 grid between the Real World and the Upside Down, use psychic inventory power-ups, find the Exit, and escape before Vecna grows too powerful. Built with pure HTML, CSS, and JavaScript.
+A browser-based psychological numbers game inspired by the Keynesian Beauty Contest from the manga/anime *Liar Game*. Built entirely with pure HTML5, CSS3, and Vanilla JavaScript—no frameworks, no external libraries.
 
-## 🎮 Game Concept
-You are trapped in a shifting 5×5 labyrinth that blurs the line between our world and the Upside Down. Your only hope is to navigate the grid, survive the toxic environment, and find the exit gate. But be warned — Vecna is gathering strength. The longer you stay, the more powerful he becomes. Reach the exit with more HP than Vecna to close the gate forever.
-
-## 🕹️ How to Play
-* You start at the bottom-left cell of a 5×5 grid with **75 HP**.
-* Every turn, roll the dice (generates a number 1–10).
-* Click an adjacent cell (up, down, left, right — no diagonals).
-* Each hidden cell has a secret requirement number (1–10).
-* If your roll ≥ requirement, you enter the cell and it flips to reveal its type.
-* If your roll is too low, your turn ends — try again.
-* On your first move, Vecna wakes up at 5 HP and gains +1 HP every second.
-* You can use your limited inventory power-ups to survive:
-  * **Psychic Power:** Bypasses a cell requirement check to let you move instantly.
-  * **Flamethrower:** Burns away and destroys a toxic cell directly ahead of your path.
-* Cells are either:
-  * 🟢 **Real World:** Safe, no HP loss.
-  * 🔴 **Upside Down:** Toxic, lose 5 HP.
-  * 🔵 **Exit:** Escape point, triggers final comparison.
-* Reach the Exit with Player HP strictly greater than Vecna HP to win.
-
-## ⚔️ Win Condition
-* Player HP > Vecna HP → You Win → Gate is closed
-* Player HP ≤ Vecna HP → Vecna Wins → Hawkins is lost
-
-## 🖥️ Screens
-* **Intro:** Full screen image featuring a lowered, transparent menu activation button.
-* **Rules:** Complete rules list, Start button.
-* **Game:** Split layout — dice & power-up inventory on the left, grid on the right, HP counters in the corners.
-* **End:** Win or loss result with replay button.
-
-## 🎥 Gameplay Demo Video
 ---
 
-## 📸 Screenshots
-### Intro Screen
-<img width="929" height="478" alt="image" src="https://github.com/user-attachments/assets/1fa04bb2-295f-48ef-987f-e89437a37ca4" />
+## 📖 What is the Keynesian Beauty Contest?
 
-### Rules Screen
-<img width="521" height="408" alt="image" src="https://github.com/user-attachments/assets/62a6a5b6-3ed2-4d96-95a4-522206c120ad" />
+In this game, players don't try to pick the "best" number—they try to predict what everyone else will pick. The target is always **80% of the average** of all submitted numbers. 
 
-### Game Screen
-<img width="940" height="457" alt="image" src="https://github.com/user-attachments/assets/718d12e9-9adc-4572-98fd-cf4d831afc17" />
+Rational players keep second-guessing each other, driving the target number closer and closer down toward zero. The ultimate twist: thinking too hard or over-strategizing can hurt you if your opponent plays simple.
 
-### End Screen
+---
 
-<img width="635" height="222" alt="image" src="https://github.com/user-attachments/assets/8469d5d4-4d03-4bce-b1b9-c9ce5151dfdf" />
+## 🎮 How to Play
 
+1. You and the Bot each secretly choose a number between **0 and 100**.
+2. The average of both numbers is calculated.
+3. That average is multiplied by **0.8** to determine the **Spider Number**.
+4. Whoever is closest to the Spider Number wins the round.
+5. The loser of the round loses a heart (`❤️`).
+6. Each player starts with **3 lives**. The first player to lose all 3 lives loses the game!
+
+---
+
+## 🖥️ Screen Layouts
+
+*   **Intro Screen:** Full-screen stylized image layout with a single, clear "Play" action button.
+*   **Rules Screen:** Outlines the core Keynesian math logic with a "Start Game" action trigger.
+*   **Game Screen:** Contains dynamic numeric inputs, a real-time hearts tracker, and an animated round outcomes panel.
+*   **End Screen:** Displays the final win/loss match status alongside a quick replay trigger.
+
+### 📸 Screenshots
+*(Place your screenshots inside the root repository directory using these exact file names to display them automatically below)*
+
+#### Intro Screen
+<img width="891" height="452" alt="image" src="https://github.com/user-attachments/assets/e16061ed-fa34-44ba-8f1d-fe92cda28419" />
+
+
+#### Rules Screen
+<img width="563" height="461" alt="image" src="https://github.com/user-attachments/assets/371869d4-bf7a-4b53-9640-5d88232dd990" />
+
+
+#### Game Screen
+<img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/6758f63c-275d-45de-91ee-896ac7d81e29" />
+
+
+#### End Screen
+<img width="615" height="374" alt="image" src="https://github.com/user-attachments/assets/8ae536cc-9a20-4e39-b996-9663afd1b38d" />
+
+
+---
 
 ## 🗂️ Project Structure
+
 ```text
-hawkins-labyrinth/
-├── index.html        # All screen markup and UI structures
-├── style.css         # Styling, transparent buttons, red borders, grid animations
-├── script.js         # Full game state logic, player health tracking
-├── audio.js          # All sound functions
-├── intro.png         # Main splash screen artwork
-├── game.png          # Primary battle environment background
+spider-game/
+├── index.html       # Unified semantic HTML5 screen structures
+├── style.css        # Layouts, flexbox system, and micro-interactions
+├── script.js        # Core game mechanics and mathematical rules engine
+├── audio.js         # Web Audio handler isolation layer
+├── kodintro.png     # Clean intro screen background graphic
+├── kodgame.png      # Clean main game frame background graphic
 └── sound/
-    ├── HLintro.wav   # Intro and rules screen music (loops)
-    ├── dice.wav      # Dice roll sound
-    ├── tick.wav      # Vecna ticking background (loops during game)
-    └── click.wav     # Button click sound
+    ├── click.wav    # Feedback sound for UI buttons
+    └── winner.wav   # Round conclusion celebration sound
