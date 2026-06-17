@@ -1,6 +1,6 @@
 # SpiderTask1: Multi-Domain Project Portfolio
 
-Welcome to my official submission repository. This project serves as a unified portfolio showcasing completed tasks across **Web Application Development**, **Cybersecurity**, and **UI/UX Design**. 
+Welcome to my official submission repository. This project serves as a unified portfolio showcasing completed tasks across ** Application Development**, **Cybersecurity**, and **UI/UX Design**. 
 
 By leveraging a modular, subfolder-based architecture, this repository functions as a clean code vault while simultaneously hosting live interactive applications through GitHub Pages.
 
