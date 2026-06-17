@@ -94,9 +94,9 @@ def main():
         print("Decrypted:")
         print(decrypted)
         if actual_hash == stored_hash:
-            print("\n✅ Integrity check PASSED - file not tampered")
+            print("\n Integrity check PASSED - file not tampered")
         else:
-            print("\n⚠️  TAMPER WARNING - file has been modified!")
+            print("\n  TAMPER WARNING - file has been modified!")
 
     elif command == "crack":
         with open(filename, 'r') as f:
