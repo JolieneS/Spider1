@@ -120,7 +120,7 @@ function renderGrid() {
     let backContent = '';
     if (cell.type === 'real-world') backContent = 'Hawkins';
     if (cell.type === 'upside-down') backContent = ' Vines';
-    if (cell.type === 'demogorgon') backContent = '<img src="img/HLdemo.png" alt="Demogorgon">';
+    if (cell.type === 'demogorgon') backContent = '<img src="img/HLdemogorgon.png" alt="Demogorgon">';
     if (cell.type === 'mindflayer') backContent = '<img src="img/HLmindflyer.png" alt="Mind Flayer">';
     if (cell.type === 'exit') backContent = 'GATEWAY';
 
