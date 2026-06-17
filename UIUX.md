@@ -17,10 +17,10 @@ https://www.figma.com/design/lLbulye37GSYgvch9nktyR/Untitled?node-id=0-1&p=f&t=t
 
 ### 1. Sections Implemented
 *   **Hero Section:** Features a commanding value-driven headline (`LIFT OFF WITH SOUND. IMMERSE IN AETHER.`), an engaging subtitle, and a dual-button call to action (Primary Gold & Secondary Outlined) paired with abstract dark wave visuals.
-*   **Featured Content:** "Featured Journeys" showcase displaying 4 curated playlists utilizing minimal, abstract art covers.
+*   **Featured Content:** "Featured For You" showcase displaying 4 curated playlists utilizing minimal, abstract art covers.
 *   **Value Proposition:** Highlights 4 core features (*Ad-Free Listening*, *Hi-Res Audio*, *Exclusives & Live*, and *Offline Play*) mapped alongside representative iconography.
 *   **Subscription Tiers:** Displays a clear multi-tier pricing layout matrix (*Basic*, *Premium*, and *Family*) featuring a distinct gold-flooded background accentuation on the recommended "Premium" tier.
-*   **Social Proof:** "Hear the Echo" section hosting 3 individual horizontal testimonial cards complete with user profiles and quotes.
+*   **Social Proof:** " Echos" section hosting 3 individual horizontal testimonial cards complete with user profiles and quotes.
 *   **Footer:** Organizes legal and functional site-map links (`About`, `Pricing`, `Support`, `Terms`) along with social media icons and a copyright notice.
 
 ### 2. Technical UI/UX Details
